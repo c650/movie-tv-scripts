@@ -12,7 +12,7 @@ require 'nokogiri'
 URL = "https://www.springfieldspringfield.co.uk/"
 
 def grab(link)
-	Nokogiri::HTML(open(link)).css(".scrolling-script-container").first.text.tr('-','')
+	Nokogiri::HTML(open(link)).css(".scrolling-script-container").first.text.tr("-*\n\r","")
 end
 
 def process_show(link)
